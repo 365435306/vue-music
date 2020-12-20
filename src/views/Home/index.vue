@@ -2,9 +2,15 @@
   <div class="home">
     <MusicList></MusicList>
     <Tabs :currentIndex="currentIndex" @changeCurrentIndex="getCurrentIndex">
-      <Tab label="导航1" index="1"></Tab>
-      <Tab label="导航2" index="2"></Tab>
-      <Tab label="导航3" index="3"></Tab>
+      <Tab label="导航1" index="1">
+        <div>1</div>
+      </Tab>
+      <Tab label="导航2" index="2">
+        <div>2</div>
+      </Tab>
+      <Tab label="导航3" index="3">
+        <div>3</div>
+      </Tab>
     </Tabs>
   </div>
 </template>

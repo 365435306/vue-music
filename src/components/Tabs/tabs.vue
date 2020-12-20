@@ -1,6 +1,15 @@
 <script>
+import Content from './content';
 export default {
   name: 'Tabs',
+  data(){
+    return {
+      showContent: []
+    }
+  },
+  components: {
+    Content
+  },
   props:{
     currentIndex:{
       type: [String,Number],
@@ -16,6 +25,7 @@ export default {
     return(
       <div>
         <ul class="tabs-header">{this.$slots.default}</ul>
+        <Content showContent={this.showContent}></Content>
       </div>
     )
   }

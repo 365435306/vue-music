@@ -16,6 +16,9 @@ export default {
       return this.$parent.currentIndex == this.index
     }
   },
+  mounted(){
+    this.$parent.showContent.push(this)
+  },
   methods:{
     clickTabHandle(){
       this.$parent.updateCurrentIndex(this.index)
