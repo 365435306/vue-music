@@ -16,6 +16,7 @@ body {
 img {
   box-sizing: border-box;
   border: 0;
+  max-width: 100%;
 }
 a,a:hover,a:active,a:visited,a:link,a:focus{
   color:#000;

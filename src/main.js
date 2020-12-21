@@ -5,8 +5,9 @@ import store from "./store";
 import "./assets/css/common.css";
 import api from '@/api'
 import Tabs from './components/Tabs'
+import BackTop from './components/BackTop'
 
-Vue.use(Tabs)
+Vue.use(Tabs).use(BackTop)
 
 Vue.prototype.$api = api
 Vue.config.productionTip = false;

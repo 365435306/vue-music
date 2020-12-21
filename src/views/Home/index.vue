@@ -1,36 +1,34 @@
 <template>
   <div class="home">
     <MusicList></MusicList>
-    <Tabs :currentIndex="currentIndex" @changeCurrentIndex="getCurrentIndex">
-      <Tab label="导航1" index="1">
-        <div>1</div>
-      </Tab>
-      <Tab label="导航2" index="2">
-        <div>2</div>
-      </Tab>
-      <Tab label="导航3" index="3">
-        <div>3</div>
-      </Tab>
-    </Tabs>
+    <MySwiper :imgList="imgs"/>
+    <MusicTabs></MusicTabs>
   </div>
 </template>
 <script>
 import MusicList from './MusicList'
+import MySwiper from '@/components/MySwiper'
+import MusicTabs from './MusicTabs'
 
 export default {
   name: "Home",
   components: {
-    MusicList
+    MusicList,
+    MySwiper,
+    MusicTabs
   },
   data() {
     return {
-      currentIndex: 1
+      imgs: [
+        require('@/assets/img/1.jpg'),
+        require('@/assets/img/2.jpg'),
+        require('@/assets/img/3.jpg'),
+        require('@/assets/img/4.jpg'),
+      ]
     }
   },
   methods:{
-    getCurrentIndex(index){
-      this.currentIndex = index
-    }
+    
   }
 }
 </script>
