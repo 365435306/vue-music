@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Layout from "../views/Layout";
+import Player from "../views/Player";
 
 Vue.use(VueRouter);
 
@@ -32,6 +33,12 @@ const routes = [
         component: () => import(/* webpackChunkName: "Topic" */ "@/views/Topic")
       }
     ]
+  },
+  {
+    path:"/player/:songId",
+    name: "Player",
+    component: Player,
+    props: true
   }
 ];
 

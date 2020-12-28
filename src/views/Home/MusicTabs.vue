@@ -44,7 +44,6 @@ export default {
         this.allMusicData.push(newMusic.data,hotMusic.data,rockMusic.data)
       })
     )
-      console.log(this.allMusicData);
   },
   mounted () {},
   methods: {

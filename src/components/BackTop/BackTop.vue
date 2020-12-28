@@ -1,5 +1,5 @@
 <template>
-  <div class="th-back-top">
+  <div class="th-back-top" v-show="show" @click="clickTopHandle">
     <span class="bg-back2top2"></span>
   </div>
 </template>
@@ -10,12 +10,25 @@ export default {
   name: "BackTop",
   data () {
     return {
-
+      show:false
     }
   },
-  mounted () {},
-  methods: {}
-
+  created () {
+    const winHeight = document.documentElement.clientHeight
+    window.addEventListener('scroll',()=>{
+      let scrollHeight = document.documentElement.scrollTop
+      if(scrollHeight>winHeight){
+        this.show = true
+      }else{
+        this.show = false
+      }
+    })
+  },
+  methods: {
+    clickTopHandle(){
+      document.documentElement.scrollTop = 0
+    }
+  }
 }
 
 </script>

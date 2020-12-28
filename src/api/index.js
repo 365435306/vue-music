@@ -6,6 +6,16 @@ const api = {
     return axios.get(base.baseURL + base.musicPath,{
       params
     })
+  },
+  getMusicLRC(params){
+    return axios.get(base.baseURL + base.musicPath,{
+      params
+    })
+  },
+  getMusicPlayer(params){
+    return axios.get(base.baseURL + base.musicPath,{
+      params
+    })
   }
 }
 

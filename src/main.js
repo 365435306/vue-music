@@ -6,6 +6,7 @@ import "./assets/css/common.css";
 import api from '@/api'
 import Tabs from './components/Tabs'
 import BackTop from './components/BackTop'
+import "./assets/iconfont/iconfont.css"
 
 Vue.use(Tabs).use(BackTop)
 

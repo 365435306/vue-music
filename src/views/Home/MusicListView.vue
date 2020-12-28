@@ -6,7 +6,8 @@
         <a href="#">更多</a>
       </div>
       <div class="list clearfix">
-        <a href="#" class="item" v-for="(item, index) in musicList" :key="index"
+        <router-link :to="{name: 'Player',params:{songId:item.song_id}}" class="item" 
+          v-for="(item, index) in musicList" :key="index"
           :class="{'clear-padding' : index%3 !== 1}" 
         >
           <div class="img-warpper">
@@ -14,7 +15,7 @@
           </div>
           <div class="main">{{ item.title }}</div>
           <div class="gray">{{ item.author }}</div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

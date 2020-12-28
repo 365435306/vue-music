@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <keep-alive include="Layout">
+      <router-view />
+    </keep-alive>
     <BackTop/>
   </div>
 </template>
